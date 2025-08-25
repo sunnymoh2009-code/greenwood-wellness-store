@@ -1,53 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Core meta -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Greenwood Wellness Store</title>
-  <meta name="description" content="JoySpring favorites for speech, focus, and everyday wellness. Fast Amazon delivery and secure checkout via Amazon." />
-  <meta name="robots" content="index, follow" />
+
+  <title>Greenwood Wellness Store – Trusted Supplements, Delivered by Amazon</title>
+  <meta name="description" content="JoySpring favorites for speech, focus, and everyday wellness—plus top Health & Beauty best-sellers. Fast Amazon delivery and secure checkout." />
   <link rel="canonical" href="https://sunnymoh2009-code.github.io/greenwood-wellness-store/" />
 
-  <!-- Styles -->
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Greenwood Wellness Store" />
+  <meta property="og:title" content="Greenwood Wellness Store – Trusted Supplements, Delivered by Amazon" />
+  <meta property="og:description" content="JoySpring favorites for speech, focus, and everyday wellness—plus Health & Beauty top sellers. Fast Amazon delivery and secure checkout." />
+  <meta property="og:url" content="https://sunnymoh2009-code.github.io/greenwood-wellness-store/" />
+  <meta property="og:image" content="og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Greenwood Wellness Store – Trusted Supplements, Delivered by Amazon" />
+  <meta name="twitter:description" content="JoySpring favorites + Health & Beauty best-sellers. Secure Amazon checkout." />
+  <meta name="twitter:image" content="og-image.jpg" />
+
+  <meta name="theme-color" content="#10b981" />
+
+  <!-- Tailwind (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
     .dot{width:6px;height:6px;border-radius:9999px;background:#9ca3af;margin-top:6px}
+    .tab-active{background:#111827;color:#fff}
   </style>
-
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Greenwood Wellness Store">
-  <meta property="og:title" content="Greenwood Wellness Store – Trusted Supplements, Delivered by Amazon">
-  <meta property="og:description" content="JoySpring favorites for speech, focus, and everyday wellness. Fast delivery and secure checkout via Amazon.">
-  <meta property="og:url" content="https://sunnymoh2009-code.github.io/greenwood-wellness-store/">
-  <!-- Points to og-cover.jpg in the repo root -->
-  <meta property="og:image" content="https://sunnymoh2009-code.github.io/greenwood-wellness-store/og-cover.jpg">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Greenwood Wellness Store – Trusted Supplements, Delivered by Amazon">
-  <meta name="twitter:description" content="JoySpring favorites for speech, focus, and everyday wellness. Fast Amazon delivery and secure checkout via Amazon.">
-  <meta name="twitter:image" content="https://sunnymoh2009-code.github.io/greenwood-wellness-store/og-cover.jpg">
-
-  <!-- Google Analytics 4 (replace G-XXXXXXX with your Measurement ID) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX', { anonymize_ip: true, send_page_view: true });
-  </script>
-
-  <!-- JSON-LD Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Greenwood Wellness Store",
-    "url": "https://sunnymoh2009-code.github.io/greenwood-wellness-store/",
-    "description": "JoySpring favorites for speech, focus, and everyday wellness. Fast Amazon delivery and secure checkout via Amazon."
-  }
-  </script>
 </head>
 <body class="bg-gray-50 text-gray-900">
   <!-- Header / Hero -->
@@ -56,9 +41,12 @@
       <div class="max-w-2xl">
         <h1 class="text-3xl font-bold sm:text-4xl">Greenwood Wellness Store</h1>
         <p class="mt-2 text-lg opacity-90">Trusted Supplements, Delivered by Amazon</p>
-        <p class="mt-3 text-white/90">JoySpring favorites for speech, focus, and everyday wellness. Fast delivery and secure checkout via Amazon.</p>
+        <p class="mt-3 text-white/90">
+          JoySpring favorites for speech, focus, and everyday wellness—plus Health &amp; Beauty best-sellers.
+        </p>
         <div class="mt-6 flex flex-wrap gap-3">
-          <a id="shopLingo" href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-emerald-700 shadow-sm transition hover:-translate-y-px">
+          <a id="shopLingo" href="#" target="_blank" rel="nofollow sponsored noopener"
+             class="inline-flex items-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-emerald-700 shadow-sm transition hover:-translate-y-px">
             <span>Shop Lingo Leap</span>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg>
           </a>
@@ -91,10 +79,20 @@
     </div>
   </div>
 
+  <!-- Tabs -->
+  <nav class="mx-auto mt-6 max-w-6xl px-4">
+    <div class="inline-flex rounded-2xl border bg-white p-1 shadow-sm">
+      <button id="tab-joyspring" class="px-4 py-2 text-sm font-semibold rounded-xl">JoySpring</button>
+      <button id="tab-beauty"   class="px-4 py-2 text-sm font-semibold rounded-xl">Health &amp; Beauty</button>
+    </div>
+  </nav>
+
   <!-- Main -->
-  <main class="mx-auto max-w-6xl px-4 py-10">
-    <h2 class="text-2xl font-bold">Featured JoySpring Products</h2>
-    <p class="mt-1 text-gray-600">Carefully curated best-sellers you can recommend with confidence.</p>
+  <main class="mx-auto max-w-6xl px-4 py-8">
+    <h2 id="section-title" class="text-2xl font-bold">Featured JoySpring Products</h2>
+    <p class="mt-1 text-gray-600" id="section-desc">
+      Carefully curated best-sellers you can recommend with confidence.
+    </p>
     <div id="grid" class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
   </main>
 
@@ -123,55 +121,55 @@
     </div>
   </footer>
 
-  <!-- Single, clean script block -->
+  <!-- Single script block -->
   <script>
-    // ----- Affiliate tags -----
-    const AFFILIATE_TAG_US = "greenwoodinvestments-20";
-    const AFFILIATE_TAG_CA = "greenwoodin01-20";
+    // ===== Affiliate tags =====
+    const AFFILIATE_TAG_US = "greenwoodinvestments-20";   // US (confirmed)
+    const AFFILIATE_TAG_CA = "greenwoodin01-20";          // CA (confirmed)
 
-    // ----- Product catalog -----
-    // Only Lingo Leap has a known CA ASIN. Others fall back to Amazon.ca search with your CA tag.
+    // ===== Simple region detection =====
+    const query = new URLSearchParams(location.search);
+    const override = query.get("view"); // ?view=us or ?view=ca (manual override for testing)
+    const isCA = override === "ca"
+      || ((navigator.language || "").toLowerCase().includes("en-ca"))
+      || ((Intl.DateTimeFormat().resolvedOptions().timeZone || "").includes("America/Edmonton"));
+
+    // ===== Product catalog (two categories) =====
     const products = [
-      { title: "Lingo Leap", subtitle: "Speech & Communication Support Drops", asinUS: "B0D2F9CZR5", asinCA: "B0F47D7K8H", bullets: ["Zeolite + D3 + B12", "Supports language development", "Kid-friendly drops"], badge: "Flagship" },
-      { title: "Genius Drops (1 oz)", subtitle: "Clinically-Proven Focus Support", asinUS: "B075FH1P4Y", asinCA: null, bullets: ["Ginkgo biloba blend", "Focus & attention", "30 servings"] },
-      { title: "Genius Drops (4 oz)", subtitle: "Family Size Focus Support", asinUS: "B07J6RFL35", asinCA: null, bullets: ["Herbal nootropics", "120 servings", "Liquid formula"] },
-      { title: "Vitamin D3 Gummies for Kids", subtitle: "D3 + K2 – Growth & Development", asinUS: "B0C87JFLDN", asinCA: null, bullets: ["60 gummies", "Kids & teens", "Bone & immunity"] },
-      { title: "Immune Drops", subtitle: "Elderberry + Echinacea + Oregon Grape Root", asinUS: "B078WK3Q4K", asinCA: null, bullets: ["Sugar-free", "Herbal immunity", "Family-friendly"] },
-      { title: "Zeolite Drops for Kids", subtitle: "Natural Zeolite + Vitamin D3", asinUS: "B0D2BKRDD7", asinCA: null, bullets: ["Daily wellness", "Zero-chemical zeolite", "Berry flavor"] },
-      { title: "Kids B-Complex", subtitle: "B Vitamins + Elderberry + Zinc + C", asinUS: "B0B18RX61R", asinCA: null, bullets: ["Overall wellness", "30 servings", "Amazon's Choice"] },
-      { title: "School Backup Support Bundle", subtitle: "Immune wellness kit for kids & teens", asinUS: "B0D9PHYCWF", asinCA: null, bullets: ["Non-GMO", "USA-made", "Bundle savings"] }
+      // --- JoySpring ---
+      { cat:"joyspring", title: "Lingo Leap", subtitle: "Speech & Communication Support Drops", asinUS: "B0D2F9CZR5", asinCA: "B0F47D7K8H", bullets: ["Zeolite + D3 + B12", "Supports language development", "Kid-friendly drops"], badge: "Flagship" },
+      { cat:"joyspring", title: "Genius Drops (1 oz)", subtitle: "Clinically-Proven Focus Support", asinUS: "B075FH1P4Y", asinCA: null, bullets: ["Ginkgo biloba blend", "Focus & attention", "30 servings"] },
+      { cat:"joyspring", title: "Genius Drops (4 oz)", subtitle: "Family Size Focus Support", asinUS: "B07J6RFL35", asinCA: null, bullets: ["Herbal nootropics", "120 servings", "Liquid formula"] },
+      { cat:"joyspring", title: "Vitamin D3 Gummies for Kids", subtitle: "D3 + K2 – Growth & Development", asinUS: "B0C87JFLDN", asinCA: null, bullets: ["60 gummies", "Kids & teens", "Bone & immunity"] },
+      { cat:"joyspring", title: "Immune Drops", subtitle: "Elderberry + Echinacea + Oregon Grape Root", asinUS: "B078WK1ZSP", asinCA: null, bullets: ["Sugar-free", "Herbal immunity", "Family-friendly"] },
+      { cat:"joyspring", title: "Zeolite Drops for Kids", subtitle: "Natural Zeolite + Vitamin D3", asinUS: "B0D2BKRDD7", asinCA: null, bullets: ["Daily wellness", "Zero-chemical zeolite", "Berry flavor"] },
+      { cat:"joyspring", title: "Kids B-Complex", subtitle: "B Vitamins + Elderberry + Zinc + C", asinUS: "B0B18RX61R", asinCA: null, bullets: ["Overall wellness", "30 servings", "Amazon's Choice"] },
+      { cat:"joyspring", title: "School Backup Support Bundle", subtitle: "Immune wellness kit for kids & teens", asinUS: "B0D9PHYCWF", asinCA: null, bullets: ["Non-GMO", "USA-made", "Bundle savings"] },
+
+      // --- Health & Beauty (top sellers; US+CA ASINs included where known) ---
+      { cat:"beauty", title:"Mighty Patch Original (36 ct)", subtitle:"Hydrocolloid Acne Pimple Patches", asinUS:"B07FNZT8JW", asinCA:"B08JZF729V", bullets:["Overnight results","Protects & heals","Best-seller"] },
+      { cat:"beauty", title:"Neutrogena Makeup Remover Wipes", subtitle:"Cleansing Towelettes", asinUS:"B00U2VQZDS", asinCA:"B07FLD6T6Q", bullets:["Removes waterproof mascara","Soft on skin","Travel-friendly"] },
+      { cat:"beauty", title:"e.l.f. Lash & Brow Enhancing Serum", subtitle:"Condition & boost look of lashes/brows", asinUS:"B0948G7M72", asinCA:"B0948G7M72", bullets:["Peptides + vitamins","Clear, gentle formula"] },
+      { cat:"beauty", title:"LANEIGE Lip Sleeping Mask", subtitle:"Overnight lip care", asinUS:"B0BR7P915B", asinCA:"B0CRDG2T21", bullets:["Ultra-moisturizing","Cult-favorite"] },
+      { cat:"beauty", title:"Mielle Rosemary Mint Oil", subtitle:"Scalp & Hair Strengthening Oil (2 oz)", asinUS:"B07HGLBZ7N", asinCA:"B08R6BG6G9", bullets:["Biotin infused","For all hair types"] },
+      { cat:"beauty", title:"CeraVe Eye Repair Cream", subtitle:"With Hyaluronic Acid & Ceramides", asinUS:"B00JJPMXDO", asinCA:"B00JJPMXDO", bullets:["Derm-developed","Fragrance-free"] },
+      { cat:"beauty", title:"Sol de Janeiro Brazilian Crush ’62", subtitle:"Body Fragrance Mist (Cheirosa ’62)", asinUS:"B086Y2D6DZ", asinCA:"B086Y2D6DZ", bullets:["Pistachio & caramel","Iconic scent"] },
+      { cat:"beauty", title:"Paula’s Choice 2% BHA Liquid", subtitle:"Salicylic Acid Exfoliant", asinUS:"B00949CTQQ", asinCA:"B004LRO9AK", bullets:["Unclogs pores","Smoother skin"] },
+      { cat:"beauty", title:"Good Molecules Gentle Retinol Cream", subtitle:"Beginner-friendly retinol", asinUS:"B0D9ZD6GQD", asinCA:"B0D9ZD6GQD", bullets:["Encapsulated retinol","Soothing base"] },
+      { cat:"beauty", title:"Olay Anti-Wrinkle 2-in-1 Day Cream + Serum", subtitle:"Age Defying, 50 mL", asinUS:"B000W9K82Y", asinCA:"B007M819DU", bullets:["Niacinamide + aloe","Lightweight daily use"] }
     ];
 
-    // ----- Region detection -----
-    const isCA =
-      (navigator.language || "").toLowerCase().includes("en-ca") ||
-      (Intl.DateTimeFormat().resolvedOptions().timeZone || "").includes("America/Edmonton") ||
-      location.hostname.endsWith(".ca");
-
-    // ----- Build Amazon URL (direct CA when known; CA search fallback; else US) -----
+    // ===== Build product URL (CA when possible; fallback to US) =====
     function buyUrl(p) {
       if (isCA) {
-        if (p.asinCA) {
-          return `https://www.amazon.ca/dp/${p.asinCA}?tag=${encodeURIComponent(AFFILIATE_TAG_CA)}`;
-        }
-        const q = encodeURIComponent(p.title);
-        return `https://www.amazon.ca/s?k=${q}&tag=${encodeURIComponent(AFFILIATE_TAG_CA)}`;
+        if (p.asinCA) return `https://www.amazon.ca/dp/${p.asinCA}?tag=${encodeURIComponent(AFFILIATE_TAG_CA)}`;
+        // CA fallback: search by title (still tagged)
+        return `https://www.amazon.ca/s?k=${encodeURIComponent(p.title)}&tag=${encodeURIComponent(AFFILIATE_TAG_CA)}`;
       }
       return `https://www.amazon.com/dp/${p.asinUS}?tag=${encodeURIComponent(AFFILIATE_TAG_US)}`;
     }
 
-    // ----- GA4 outbound click tracking -----
-    function trackAffiliateClick(productTitle, destination) {
-      if (typeof gtag === 'function') {
-        gtag('event', 'affiliate_click', {
-          event_category: 'engagement',
-          event_label: productTitle,
-          destination: destination
-        });
-      }
-    }
-
-    // ----- Render product cards -----
+    // ===== Card template =====
     function productCard(p) {
       const li = document.createElement("div");
       li.className = "group relative flex flex-col justify-between rounded-2xl border bg-white p-4 shadow-sm transition hover:shadow-md";
@@ -192,10 +190,7 @@
         </ul>
         <div class="mt-4 flex items-center justify-between">
           ${p.badge ? `<span class="inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs font-medium">⭐ ${p.badge}</span>` : `<span></span>`}
-          <a href="${buyUrl(p)}"
-             target="_blank"
-             rel="nofollow sponsored noopener"
-             onclick="trackAffiliateClick('${p.title}', this.href)"
+          <a href="${buyUrl(p)}" target="_blank" rel="nofollow sponsored noopener"
              class="inline-flex items-center gap-2 rounded-xl border bg-black px-3 py-2 text-sm font-semibold text-white transition hover:-translate-y-px hover:opacity-95">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/>
@@ -210,10 +205,43 @@
       return li;
     }
 
-    // ----- Render all products & set top CTA -----
+    // ===== Render logic =====
     const grid = document.getElementById("grid");
-    products.forEach(p => grid.appendChild(productCard(p)));
-    document.getElementById("shopLingo").href = buyUrl(products[0]);
+    const titleEl = document.getElementById("section-title");
+    const descEl  = document.getElementById("section-desc");
+    const tabJoy  = document.getElementById("tab-joyspring");
+    const tabBeau = document.getElementById("tab-beauty");
+
+    function render(cat) {
+      // Tabs UI
+      tabJoy.classList.toggle("tab-active", cat === "joyspring");
+      tabBeau.classList.toggle("tab-active", cat === "beauty");
+
+      // Title / Desc
+      if (cat === "joyspring") {
+        titleEl.textContent = "Featured JoySpring Products";
+        descEl.textContent  = "Carefully curated best-sellers you can recommend with confidence.";
+      } else {
+        titleEl.textContent = "Top Health & Beauty Best-Sellers";
+        descEl.textContent  = "Highly-rated essentials added for your convenience.";
+      }
+
+      // Grid
+      grid.innerHTML = "";
+      products.filter(p => p.cat === cat).forEach(p => grid.appendChild(productCard(p)));
+
+      // Top CTA always points to Lingo Leap
+      const lingo = products.find(p => p.title === "Lingo Leap");
+      document.getElementById("shopLingo").href = buyUrl(lingo);
+    }
+
+    // Default view from URL (?cat=beauty) or JoySpring
+    const startCat = (new URLSearchParams(location.search).get("cat") === "beauty") ? "beauty" : "joyspring";
+    render(startCat);
+
+    // Tab events
+    tabJoy.addEventListener("click", () => render("joyspring"));
+    tabBeau.addEventListener("click", () => render("beauty"));
   </script>
 </body>
 </html>
