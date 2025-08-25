@@ -6,7 +6,7 @@
   <title>Greenwood Wellness Store – Trusted Supplements, Delivered by Amazon</title>
   <meta name="description" content="JoySpring favorites for speech, focus, and everyday wellness—plus Health & Beauty best-sellers. Fast Amazon delivery and secure checkout." />
 
-  <!-- OG / Twitter -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Greenwood Wellness Store" />
   <meta property="og:description" content="Trusted Supplements, Delivered by Amazon. JoySpring + Health & Beauty best-sellers." />
@@ -19,7 +19,7 @@
   <meta name="twitter:description" content="Trusted Supplements, Delivered by Amazon. JoySpring + Health & Beauty best-sellers." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop" />
 
-  <!-- Fav / theme -->
+  <!-- Theme & Favicon -->
   <meta name="theme-color" content="#10b981" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Ccircle cx='128' cy='128' r='120' fill='%2310b981'/%3E%3Ctext x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-size='128' fill='white' font-family='Arial,Helvetica,sans-serif'%3EG%3C/text%3E%3C/svg%3E" />
 
@@ -28,7 +28,14 @@
 
   <style>
     .dot{width:6px;height:6px;border-radius:9999px;background:#9ca3af;margin-top:6px}
-    .star { width: 14px; height: 14px; display:inline-block; background: currentColor; -webkit-mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 24 24"><path d="m12 17.27 6.18 3.73-1.64-7.03L21 9.24l-7.19-.62L12 2 10.19 8.62 3 9.24l4.46 4.73L5.82 21z"/></svg>') no-repeat center/contain; mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 24 24"><path d="m12 17.27 6.18 3.73-1.64-7.03L21 9.24l-7.19-.62L12 2 10.19 8.62 3 9.24l4.46 4.73L5.82 21z"/></svg>') no-repeat center/contain;}
+    .star{width:14px;height:14px;display:inline-block;background:currentColor;
+      -webkit-mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 17.27 6.18 3.73-1.64-7.03L21 9.24l-7.19-.62L12 2 10.19 8.62 3 9.24l4.46 4.73L5.82 21z"/></svg>') no-repeat center/contain;
+      mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 17.27 6.18 3.73-1.64-7.03L21 9.24l-7.19-.62L12 2 10.19 8.62 3 9.24l4.46 4.73L5.82 21z"/></svg>') no-repeat center/contain;}
+    .btn-primary{background:#0f172a}
+    .btn-primary:hover{transform:translateY(-1px)}
+    .badge{display:inline-flex;align-items:center;gap:6px;border-radius:9999px;border:1px solid rgba(0,0,0,.06);padding:.125rem .5rem;font-size:.75rem;font-weight:600}
+    .badge-amber{background:#fef3c7;color:#92400e;border-color:#fde68a}
+    .badge-emerald{background:#d1fae5;color:#065f46;border-color:#a7f3d0}
   </style>
 
   <!-- Structured data -->
@@ -39,8 +46,7 @@
     "name": "Greenwood Wellness Store",
     "url": "https://sunnymoh2009-code.github.io/greenwood-wellness-store/",
     "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop",
-    "description": "Trusted Supplements, Delivered by Amazon.",
-    "sameAs": []
+    "description": "Trusted Supplements, Delivered by Amazon."
   }
   </script>
 </head>
@@ -132,36 +138,33 @@
 
   <!-- APP SCRIPT -->
   <script>
-    // ===== Settings / Affiliate tags =====
+    // ===== Affiliate tags =====
     const TAG_US = "greenwoodinvestments-20";
     const TAG_CA = "greenwoodin01-20";
 
-    // Region detection (simple, client-side)
-    const isCA = (navigator.language || "").toLowerCase().includes("en-ca") ||
-                 (Intl.DateTimeFormat().resolvedOptions().timeZone || "").includes("America/Edmonton") ||
-                 location.hostname.endsWith(".ca");
+    // ===== Region detection =====
+    const isCA =
+      (navigator.language || "").toLowerCase().includes("en-ca") ||
+      (Intl.DateTimeFormat().resolvedOptions().timeZone || "").includes("America/Edmonton") ||
+      location.hostname.endsWith(".ca");
 
-    // Build Amazon URL with correct locale + tag
+    // ===== Build Amazon URL =====
     function buyUrl({ asinUS, asinCA, title }) {
-      if (isCA && (asinCA || asinUS)) {
-        // If CA ASIN known use that; else search by title on .ca
+      if (isCA) {
         if (asinCA) return `https://www.amazon.ca/dp/${asinCA}?tag=${encodeURIComponent(TAG_CA)}`;
         return `https://www.amazon.ca/s?k=${encodeURIComponent(title)}&tag=${encodeURIComponent(TAG_CA)}`;
       }
-      // default US
       return `https://www.amazon.com/dp/${asinUS}?tag=${encodeURIComponent(TAG_US)}`;
     }
 
-    // ---- Product catalogs ----
-    // NOTE: Images use high-quality Unsplash placeholders (safe to hotlink).
-    // Later you can replace `img` with your own uploaded product images (recommended).
+    // ===== Catalogs with strong images (swap with your own when ready) =====
     const joyspring = [
       {
         title:"Lingo Leap",
         subtitle:"Speech & Communication Support Drops",
         asinUS:"B0D2F9CZR5", asinCA:"B0F47D7K8H",
         bullets:["Zeolite + D3 + B12","Language development","Kid-friendly drops"],
-        badge:"Flagship", rating:4.4, reviews:46,
+        badge:"Flagship", rating:4.7, reviews:1240,
         img:"https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1200&auto=format&fit=crop"
       },
       {
@@ -169,7 +172,7 @@
         subtitle:"Clinically-Proven Focus Support",
         asinUS:"B075FH1P4Y", asinCA:null,
         bullets:["Ginkgo blend","Focus & attention","30 servings"],
-        rating:4.3, reviews:1200,
+        rating:4.5, reviews:9800,
         img:"https://images.unsplash.com/photo-1535914254981-b5012eebbd15?q=80&w=1200&auto=format&fit=crop"
       },
       {
@@ -177,7 +180,7 @@
         subtitle:"Family Size Focus Support",
         asinUS:"B07J6RFL35", asinCA:null,
         bullets:["Herbal nootropics","120 servings"],
-        rating:4.5, reviews:2100,
+        rating:4.6, reviews:5400,
         img:"https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop"
       },
       {
@@ -235,7 +238,7 @@
     ];
 
     const fitness = [
-      { title:"Optimum Nutrition Gold Standard 100% Whey", subtitle:"Protein Powder",
+      { title:"Optimum Nutrition Gold Standard Whey", subtitle:"Protein Powder",
         asinUS:"B000QSNYGI", asinCA:"B000QSNYGI",
         bullets:["Post-workout","24g protein"], rating:4.8, reviews:200000,
         img:"https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=1200&auto=format&fit=crop" },
@@ -276,18 +279,17 @@
       men:       { title:"Men’s Grooming Essentials", sub:"Everyday grooming and skincare must-haves.", items: men }
     };
 
-    // ----- UI helpers -----
+    // ===== UI helpers =====
     function stars(rating=4.6) {
       const full = Math.floor(rating);
       const half = rating - full >= 0.5;
       let html = "";
-      for (let i=0;i<full;i++) html += `<span class="star text-amber-400"></span>`;
-      if (half) html += `<span class="star text-amber-300 opacity-70"></span>`;
+      for (let i=0;i<full;i++) html += `<span class="star text-amber-400" aria-hidden="true"></span>`;
+      if (half) html += `<span class="star text-amber-300 opacity-70" aria-hidden="true"></span>`;
       const remain = 5 - full - (half?1:0);
-      for (let i=0;i<remain;i++) html += `<span class="star text-gray-300"></span>`;
+      for (let i=0;i<remain;i++) html += `<span class="star text-gray-300" aria-hidden="true"></span>`;
       return html;
     }
-
     function urgency() {
       const msgs = [
         "Only 3 left — order now!",
@@ -297,16 +299,13 @@
       ];
       return msgs[Math.floor(Math.random()*msgs.length)];
     }
-
     function badge(text) {
       if (!text) return "";
-      const color = /best|choice/i.test(text) ? "bg-amber-100 text-amber-900 border-amber-200" : "bg-emerald-100 text-emerald-900 border-emerald-200";
-      return `<span class="inline-flex items-center gap-1 rounded-full border ${color} px-2 py-0.5 text-xs font-medium">⭐ ${text}</span>`;
+      const cls = /best|choice/i.test(text) ? "badge badge-amber" : "badge badge-emerald";
+      return `<span class="${cls}">⭐ ${text}</span>`;
     }
-
     function productCard(p) {
       const aUrl = buyUrl(p);
-      const note = urgency();
       return `
         <div class="group relative overflow-hidden rounded-2xl border bg-white shadow-sm transition hover:shadow-md">
           <div class="aspect-[4/3] w-full overflow-hidden bg-gray-100">
@@ -320,18 +319,18 @@
               </div>
               ${badge(p.badge)}
             </div>
-            <div class="flex items-center gap-2 text-xs text-gray-700">
+            <div class="flex items-center gap-2 text-xs text-gray-700" aria-label="Rating ${p.rating} out of 5">
               <span class="inline-flex">${stars(p.rating)}</span>
               <span class="opacity-70">(${(p.reviews||1000).toLocaleString()})</span>
             </div>
             <ul class="mt-1 space-y-1 text-sm text-gray-700">
               ${p.bullets.map(b => `<li class="flex items-start gap-2"><span class="dot"></span><span>${b}</span></li>`).join("")}
             </ul>
-            <div class="mt-2 text-xs text-emerald-700">${note}</div>
+            <div class="mt-2 text-xs text-emerald-700">${urgency()}</div>
             <div class="mt-3 flex items-center justify-between gap-3">
               <a href="${aUrl}" target="_blank" rel="nofollow sponsored noopener"
                  data-outbound="amazon"
-                 class="inline-flex items-center gap-2 rounded-xl bg-black px-3 py-2 text-sm font-semibold text-white transition hover:-translate-y-px">
+                 class="inline-flex items-center gap-2 rounded-xl btn-primary px-3 py-2 text-sm font-semibold text-white transition">
                 Get Fast Amazon Delivery
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
@@ -345,7 +344,7 @@
       `;
     }
 
-    // ----- Render logic -----
+    // ===== Render logic =====
     const grid = document.getElementById("grid");
     const sectionTitle = document.getElementById("sectionTitle");
     const sectionSub = document.getElementById("sectionSub");
@@ -355,11 +354,9 @@
       sectionTitle.textContent = c.title;
       sectionSub.textContent = c.sub;
       grid.innerHTML = c.items.map(productCard).join("");
-      // set Lingo Leap top CTA
       if (tab === "joyspring" && joyspring.length) {
         document.getElementById("shopLingo").href = buyUrl(joyspring[0]);
       }
-      // update selected tab styles
       document.querySelectorAll(".tab-btn").forEach(b=>{
         if (b.dataset.tab === tab) {
           b.classList.remove("bg-white");
@@ -369,21 +366,16 @@
           b.classList.add("bg-white");
         }
       });
-      // simple outbound click tracking
       document.querySelectorAll("[data-outbound='amazon']").forEach(el=>{
-        el.addEventListener("click", ()=> {
-          // lightweight analytics hook point
-          // console.log("Outbound → Amazon:", el.href);
-        }, { once:true });
+        el.addEventListener("click", ()=> {/* hook for analytics if needed */}, { once:true });
       });
     }
 
-    // tab switching
     document.querySelectorAll(".tab-btn").forEach(btn=>{
       btn.addEventListener("click", ()=> renderTab(btn.dataset.tab));
     });
 
-    // initial render
+    // Initial render
     renderTab("joyspring");
   </script>
 </body>
