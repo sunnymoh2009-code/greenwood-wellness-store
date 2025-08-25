@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Core meta -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Greenwood Wellness Store</title>
   <meta name="description" content="JoySpring favorites for speech, focus, and everyday wellness. Fast Amazon delivery and secure checkout via Amazon." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://sunnymoh2009-code.github.io/greenwood-wellness-store/" />
+
+  <!-- Styles -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>.dot{width:6px;height:6px;border-radius:9999px;background:#9ca3af;margin-top:6px}</style>
+  <style>
+    .dot{width:6px;height:6px;border-radius:9999px;background:#9ca3af;margin-top:6px}
+  </style>
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Greenwood Wellness Store">
+  <meta property="og:title" content="Greenwood Wellness Store – Trusted Supplements, Delivered by Amazon">
+  <meta property="og:description" content="JoySpring favorites for speech, focus, and everyday wellness. Fast delivery and secure checkout via Amazon.">
+  <meta property="og:url" content="https://sunnymoh2009-code.github.io/greenwood-wellness-store/">
+  <!-- Points to og-cover.jpg in the repo root -->
+  <meta property="og:image" content="https://sunnymoh2009-code.github.io/greenwood-wellness-store/og-cover.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Greenwood Wellness Store – Trusted Supplements, Delivered by Amazon">
+  <meta name="twitter:description" content="JoySpring favorites for speech, focus, and everyday wellness. Fast Amazon delivery and secure checkout via Amazon.">
+  <meta name="twitter:image" content="https://sunnymoh2009-code.github.io/greenwood-wellness-store/og-cover.jpg">
+
+  <!-- Google Analytics 4 (replace G-XXXXXXX with your Measurement ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX', { anonymize_ip: true, send_page_view: true });
+  </script>
+
+  <!-- JSON-LD Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Greenwood Wellness Store",
+    "url": "https://sunnymoh2009-code.github.io/greenwood-wellness-store/",
+    "description": "JoySpring favorites for speech, focus, and everyday wellness. Fast Amazon delivery and secure checkout via Amazon."
+  }
+  </script>
 </head>
 <body class="bg-gray-50 text-gray-900">
   <!-- Header / Hero -->
@@ -82,13 +123,14 @@
     </div>
   </footer>
 
-  <!-- Single, clean script -->
+  <!-- Single, clean script block -->
   <script>
     // ----- Affiliate tags -----
     const AFFILIATE_TAG_US = "greenwoodinvestments-20";
     const AFFILIATE_TAG_CA = "greenwoodin01-20";
 
-    // ----- Products (CA ASIN known for Lingo Leap only; others fallback to CA search) -----
+    // ----- Product catalog -----
+    // Only Lingo Leap has a known CA ASIN. Others fall back to Amazon.ca search with your CA tag.
     const products = [
       { title: "Lingo Leap", subtitle: "Speech & Communication Support Drops", asinUS: "B0D2F9CZR5", asinCA: "B0F47D7K8H", bullets: ["Zeolite + D3 + B12", "Supports language development", "Kid-friendly drops"], badge: "Flagship" },
       { title: "Genius Drops (1 oz)", subtitle: "Clinically-Proven Focus Support", asinUS: "B075FH1P4Y", asinCA: null, bullets: ["Ginkgo biloba blend", "Focus & attention", "30 servings"] },
@@ -109,14 +151,27 @@
     // ----- Build Amazon URL (direct CA when known; CA search fallback; else US) -----
     function buyUrl(p) {
       if (isCA) {
-        if (p.asinCA) return `https://www.amazon.ca/dp/${p.asinCA}?tag=${encodeURIComponent(AFFILIATE_TAG_CA)}`;
+        if (p.asinCA) {
+          return `https://www.amazon.ca/dp/${p.asinCA}?tag=${encodeURIComponent(AFFILIATE_TAG_CA)}`;
+        }
         const q = encodeURIComponent(p.title);
         return `https://www.amazon.ca/s?k=${q}&tag=${encodeURIComponent(AFFILIATE_TAG_CA)}`;
       }
       return `https://www.amazon.com/dp/${p.asinUS}?tag=${encodeURIComponent(AFFILIATE_TAG_US)}`;
     }
 
-    // ----- Render cards -----
+    // ----- GA4 outbound click tracking -----
+    function trackAffiliateClick(productTitle, destination) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'affiliate_click', {
+          event_category: 'engagement',
+          event_label: productTitle,
+          destination: destination
+        });
+      }
+    }
+
+    // ----- Render product cards -----
     function productCard(p) {
       const li = document.createElement("div");
       li.className = "group relative flex flex-col justify-between rounded-2xl border bg-white p-4 shadow-sm transition hover:shadow-md";
@@ -137,7 +192,10 @@
         </ul>
         <div class="mt-4 flex items-center justify-between">
           ${p.badge ? `<span class="inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs font-medium">⭐ ${p.badge}</span>` : `<span></span>`}
-          <a href="${buyUrl(p)}" target="_blank" rel="nofollow sponsored noopener"
+          <a href="${buyUrl(p)}"
+             target="_blank"
+             rel="nofollow sponsored noopener"
+             onclick="trackAffiliateClick('${p.title}', this.href)"
              class="inline-flex items-center gap-2 rounded-xl border bg-black px-3 py-2 text-sm font-semibold text-white transition hover:-translate-y-px hover:opacity-95">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/>
@@ -152,7 +210,7 @@
       return li;
     }
 
-    // ----- Render everything -----
+    // ----- Render all products & set top CTA -----
     const grid = document.getElementById("grid");
     products.forEach(p => grid.appendChild(productCard(p)));
     document.getElementById("shopLingo").href = buyUrl(products[0]);
