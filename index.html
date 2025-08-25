@@ -4,85 +4,108 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Greenwood Wellness Store – Trusted Supplements, Delivered by Amazon</title>
-  <meta name="description" content="JoySpring favorites for speech, focus, and everyday wellness—plus top Health & Beauty best-sellers. Fast Amazon delivery and secure checkout."/>
-  <link rel="canonical" href="https://sunnymoh2009-code.github.io/greenwood-wellness-store/" />
+  <meta name="description" content="JoySpring favorites for speech, focus, and everyday wellness—plus Health & Beauty best-sellers. Fast Amazon delivery and secure checkout." />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Greenwood Wellness Store – Trusted Supplements, Delivered by Amazon" />
-  <meta property="og:description" content="Shop family-friendly wellness picks and health & beauty best-sellers. Fast Amazon delivery, secure checkout." />
+  <!-- OG / Twitter -->
   <meta property="og:type" content="website" />
+  <meta property="og:title" content="Greenwood Wellness Store" />
+  <meta property="og:description" content="Trusted Supplements, Delivered by Amazon. JoySpring + Health & Beauty best-sellers." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://sunnymoh2009-code.github.io/greenwood-wellness-store/" />
-  <meta property="og:image" content="https://sunnymoh2009-code.github.io/greenwood-wellness-store/images/og-greenwood-1200x630.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Greenwood Wellness Store – Trusted Supplements, Delivered by Amazon" />
-  <meta name="twitter:description" content="Shop family-friendly wellness picks and health & beauty best-sellers. Fast Amazon delivery, secure checkout." />
-  <meta name="twitter:image" content="https://sunnymoh2009-code.github.io/greenwood-wellness-store/images/og-greenwood-1200x630.jpg" />
+  <meta name="twitter:title" content="Greenwood Wellness Store" />
+  <meta name="twitter:description" content="Trusted Supplements, Delivered by Amazon. JoySpring + Health & Beauty best-sellers." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop" />
+
+  <!-- Fav / theme -->
+  <meta name="theme-color" content="#10b981" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Ccircle cx='128' cy='128' r='120' fill='%2310b981'/%3E%3Ctext x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-size='128' fill='white' font-family='Arial,Helvetica,sans-serif'%3EG%3C/text%3E%3C/svg%3E" />
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     .dot{width:6px;height:6px;border-radius:9999px;background:#9ca3af;margin-top:6px}
-    .truncate-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-    .rating:before{content:"★★★★★";letter-spacing:2px;background:linear-gradient(90deg,#f59e0b var(--pct),#e5e7eb var(--pct));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .badge{font-size:.72rem;border-radius:.5rem;border:1px solid #e5e7eb;padding:.12rem .4rem;white-space:nowrap}
-    .img-skeleton{background:linear-gradient(90deg,#f3f4f6,#e5e7eb,#f3f4f6);background-size:200% 100%;animation:shimmer 1.2s infinite}
-    @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+    .star { width: 14px; height: 14px; display:inline-block; background: currentColor; -webkit-mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 24 24"><path d="m12 17.27 6.18 3.73-1.64-7.03L21 9.24l-7.19-.62L12 2 10.19 8.62 3 9.24l4.46 4.73L5.82 21z"/></svg>') no-repeat center/contain; mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 24 24"><path d="m12 17.27 6.18 3.73-1.64-7.03L21 9.24l-7.19-.62L12 2 10.19 8.62 3 9.24l4.46 4.73L5.82 21z"/></svg>') no-repeat center/contain;}
   </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Greenwood Wellness Store",
+    "url": "https://sunnymoh2009-code.github.io/greenwood-wellness-store/",
+    "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop",
+    "description": "Trusted Supplements, Delivered by Amazon.",
+    "sameAs": []
+  }
+  </script>
 </head>
 <body class="bg-gray-50 text-gray-900">
-  <!-- Header / Hero -->
-  <header class="relative isolate overflow-hidden bg-gradient-to-br from-emerald-600 via-emerald-500 to-teal-500 py-16 text-white">
+  <!-- HERO -->
+  <header class="relative isolate overflow-hidden bg-gradient-to-br from-emerald-600 via-emerald-500 to-teal-500 py-14 text-white">
     <div class="mx-auto max-w-6xl px-4">
-      <div class="max-w-2xl">
+      <div class="flex flex-col gap-3 max-w-2xl">
         <h1 class="text-3xl font-bold sm:text-4xl">Greenwood Wellness Store</h1>
-        <p class="mt-2 text-lg opacity-90">Trusted Supplements, Delivered by Amazon</p>
-        <p class="mt-3 text-white/90">JoySpring favorites for speech, focus, and everyday wellness—plus Health & Beauty best-sellers.</p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a id="shopLingo" href="#" target="_blank" rel="nofollow sponsored noopener" class="inline-flex items-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-emerald-700 shadow-sm transition hover:-translate-y-px">
+        <p class="text-lg opacity-90">Trusted Supplements, Delivered by Amazon</p>
+        <p class="text-white/90">JoySpring favorites for speech, focus, and everyday wellness—plus Health &amp; Beauty best-sellers.</p>
+        <div class="mt-2 flex flex-wrap gap-3">
+          <a id="shopLingo" href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-emerald-700 shadow-sm transition hover:-translate-y-px">
             <span>Shop Lingo Leap</span>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg>
           </a>
-          <a href="#why" class="inline-flex items-center gap-2 rounded-2xl border border-white/40 px-4 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:-translate-y-px">
-            Why buy through us?
-          </a>
+          <a href="#why" class="inline-flex items-center gap-2 rounded-2xl border border-white/40 px-4 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:-translate-y-px">Why buy through us?</a>
         </div>
       </div>
     </div>
-    <div class="pointer-events-none absolute inset-0 -z-10 opacity-30" aria-hidden="true">
+    <div class="pointer-events-none absolute inset-0 -z-10 opacity-25" aria-hidden="true">
       <div class="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white blur-3xl"></div>
     </div>
   </header>
 
-  <!-- Trust bar -->
-  <div class="border-b bg-white/70">
-    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-6 px-4 py-3 text-sm text-white">
-      <span class="inline-flex items-center gap-2 rounded-full bg-emerald-600/90 px-3 py-1">✅ Prime Available</span>
-      <span class="inline-flex items-center gap-2 rounded-full bg-emerald-600/90 px-3 py-1">🔒 Secure Amazon Checkout</span>
-      <span class="inline-flex items-center gap-2 rounded-full bg-emerald-600/90 px-3 py-1">⭐ Top Rated Products</span>
+  <!-- TRUST RIBBON -->
+  <div class="border-b bg-white">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-6 px-4 py-3 text-sm text-gray-700">
+      <div class="inline-flex items-center gap-2">🛒 <span>Prime shipping available</span></div>
+      <div class="inline-flex items-center gap-2">🔒 <span>Secure Amazon checkout</span></div>
+      <div class="inline-flex items-center gap-2">⭐ <span>Top rated picks</span></div>
     </div>
   </div>
 
-  <!-- Tabs -->
+  <!-- CATEGORY TABS -->
   <div class="mx-auto max-w-6xl px-4 pt-8">
-    <div id="tabs" class="flex flex-wrap gap-2">
-      <button data-tab="joyspring" class="tab active rounded-full border bg-white px-4 py-2 text-sm font-semibold shadow-sm">JoySpring</button>
-      <button data-tab="beauty" class="tab rounded-full border bg-white px-4 py-2 text-sm font-semibold shadow-sm">Health & Beauty</button>
-      <button data-tab="vitamins" class="tab rounded-full border bg-white px-4 py-2 text-sm font-semibold shadow-sm">Vitamins & Supplements</button>
-      <button data-tab="fitness" class="tab rounded-full border bg-white px-4 py-2 text-sm font-semibold shadow-sm">Fitness & Weight Loss</button>
-      <button data-tab="kids" class="tab rounded-full border bg-white px-4 py-2 text-sm font-semibold shadow-sm">Baby & Kids Wellness</button>
-      <button data-tab="mens" class="tab rounded-full border bg-white px-4 py-2 text-sm font-semibold shadow-sm">Men’s Grooming Essentials</button>
+    <div class="flex flex-wrap gap-2 text-sm">
+      <button data-tab="joyspring" class="tab-btn rounded-xl border px-3 py-1.5 font-medium bg-black text-white">JoySpring</button>
+      <button data-tab="beauty" class="tab-btn rounded-xl border px-3 py-1.5 font-medium bg-white">Health &amp; Beauty</button>
+      <button data-tab="vitamins" class="tab-btn rounded-xl border px-3 py-1.5 font-medium bg-white">Vitamins &amp; Supplements</button>
+      <button data-tab="fitness" class="tab-btn rounded-xl border px-3 py-1.5 font-medium bg-white">Fitness &amp; Weight Loss</button>
+      <button data-tab="kids" class="tab-btn rounded-xl border px-3 py-1.5 font-medium bg-white">Baby &amp; Kids Wellness</button>
+      <button data-tab="men" class="tab-btn rounded-xl border px-3 py-1.5 font-medium bg-white">Men’s Grooming Essentials</button>
     </div>
   </div>
 
-  <!-- Grid -->
+  <!-- GRID -->
   <main class="mx-auto max-w-6xl px-4 py-8">
     <h2 id="sectionTitle" class="text-2xl font-bold">Featured JoySpring Products</h2>
     <p id="sectionSub" class="mt-1 text-gray-600">Carefully curated best-sellers you can recommend with confidence.</p>
-    <div id="grid" class="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+    <div id="grid" class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
   </main>
 
-  <!-- Footer -->
+  <!-- CTA BANNER -->
+  <section class="mx-auto max-w-6xl px-4 pb-4">
+    <div class="rounded-2xl bg-emerald-600 text-white p-6 flex items-center justify-between flex-col sm:flex-row gap-4">
+      <div>
+        <h3 class="text-xl font-semibold">Your family deserves better health ❤️</h3>
+        <p class="text-white/90">Get trusted JoySpring and Health &amp; Beauty best-sellers — Amazon delivers fast!</p>
+      </div>
+      <a href="#grid" class="inline-flex items-center gap-2 rounded-xl bg-white px-4 py-3 text-sm font-semibold text-emerald-700 shadow-sm transition hover:-translate-y-px">Shop Now →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="mt-8 border-t bg-white">
     <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-gray-600">
       <div id="why" class="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -107,188 +130,260 @@
     </div>
   </footer>
 
-  <!-- Script -->
+  <!-- APP SCRIPT -->
   <script>
-    /* ===== Config: Affiliate & Region ===== */
-    const AFFILIATE_TAG_US = "greenwoodinvestments-20";
-    const AFFILIATE_TAG_CA = "greenwoodin01-20";
+    // ===== Settings / Affiliate tags =====
+    const TAG_US = "greenwoodinvestments-20";
+    const TAG_CA = "greenwoodin01-20";
 
-    const isCA =
-      (navigator.language || "").toLowerCase().includes("en-ca") ||
-      (Intl.DateTimeFormat().resolvedOptions().timeZone || "").includes("America/Edmonton");
+    // Region detection (simple, client-side)
+    const isCA = (navigator.language || "").toLowerCase().includes("en-ca") ||
+                 (Intl.DateTimeFormat().resolvedOptions().timeZone || "").includes("America/Edmonton") ||
+                 location.hostname.endsWith(".ca");
 
-    /* ===== Helpers ===== */
-    const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");
-    const imgUrl = (title) => {
-      const u = `images/${slug(title)}.jpg`;
-      return u; // you can upload images with these filenames; we also have a placeholder fallback below onerror
-    };
-    const placeholder = (el) => { el.src = "https://images.unsplash.com/photo-1556228453-efd1c02cd1f1?q=80&w=1200&auto=format&fit=crop"; };
-
-    function productUrl(p){
-      const base = isCA ? "https://www.amazon.ca" : "https://www.amazon.com";
-      const tag = isCA ? AFFILIATE_TAG_CA : AFFILIATE_TAG_US;
-      if (isCA && p.asinCA) return `${base}/dp/${p.asinCA}?tag=${encodeURIComponent(tag)}`;
-      if (!isCA && p.asinUS) return `${base}/dp/${p.asinUS}?tag=${encodeURIComponent(tag)}`;
-      const q = encodeURIComponent(p.title);
-      return `${base}/s?k=${q}&tag=${encodeURIComponent(tag)}`;
+    // Build Amazon URL with correct locale + tag
+    function buyUrl({ asinUS, asinCA, title }) {
+      if (isCA && (asinCA || asinUS)) {
+        // If CA ASIN known use that; else search by title on .ca
+        if (asinCA) return `https://www.amazon.ca/dp/${asinCA}?tag=${encodeURIComponent(TAG_CA)}`;
+        return `https://www.amazon.ca/s?k=${encodeURIComponent(title)}&tag=${encodeURIComponent(TAG_CA)}`;
+      }
+      // default US
+      return `https://www.amazon.com/dp/${asinUS}?tag=${encodeURIComponent(TAG_US)}`;
     }
 
-    function ratingToPct(r){ // 0..5 -> %
-      const clamped = Math.max(0, Math.min(5, r || 4.6));
-      return (clamped/5*100).toFixed(0)+"%";
-    }
-
-    function card(p){
-      const el = document.createElement("div");
-      el.className = "group relative overflow-hidden rounded-2xl border bg-white shadow-sm transition hover:shadow-md";
-      el.innerHTML = `
-        <div class="relative">
-          <img class="h-44 w-full object-cover img-skeleton" src="${imgUrl(p.title)}" alt="${p.title}" onerror="this.onerror=null; ${placeholder.toString()}(this)" />
-          <div class="absolute left-3 top-3 flex gap-2">
-            ${p.badge ? `<span class="badge bg-white/80">${p.badge}</span>` : ""}
-            ${p.choice ? `<span class="badge bg-amber-50 border-amber-200">Amazon's Choice</span>` : ""}
-            ${p.best ? `<span class="badge bg-emerald-50 border-emerald-200">Best Seller</span>` : ""}
-          </div>
-          <div class="absolute right-3 top-3 rounded-full bg-white/90 px-2 py-1 text-xs font-semibold">⭐ ${p.rating?.toFixed(1) || "4.6"}</div>
-        </div>
-        <div class="p-4">
-          <h3 class="text-base font-semibold leading-tight">${p.title}</h3>
-          <p class="mt-0.5 text-sm text-gray-600 truncate-2">${p.subtitle || ""}</p>
-          ${Array.isArray(p.bullets) ? `
-            <ul class="mt-3 space-y-1 text-sm text-gray-700">
-              ${p.bullets.slice(0,3).map(b=>`<li class="flex items-start gap-2"><span class="dot"></span><span>${b}</span></li>`).join("")}
-            </ul>` : ""}
-          <div class="mt-4 flex items-center justify-between">
-            <div class="rating text-lg" style="--pct:${ratingToPct(p.rating)}"></div>
-            <div class="text-xs text-gray-500 hidden sm:block">${p.urgency || "Fast delivery available"}</div>
-          </div>
-          <div class="mt-4 flex flex-wrap items-center gap-2">
-            <a href="${productUrl(p)}" target="_blank" rel="nofollow sponsored noopener"
-               class="inline-flex items-center gap-2 rounded-xl bg-black px-3 py-2 text-sm font-semibold text-white transition hover:-translate-y-px">
-              🛒 Get Fast Amazon Delivery
-            </a>
-            <span class="rounded-full border px-2 py-1 text-xs">✅ Prime Available</span>
-            <span class="rounded-full border px-2 py-1 text-xs">🔒 Secure Checkout</span>
-          </div>
-        </div>
-      `;
-      return el;
-    }
-
-    /* ===== Catalogs (safe defaults; uses search if ASIN missing) ===== */
+    // ---- Product catalogs ----
+    // NOTE: Images use high-quality Unsplash placeholders (safe to hotlink).
+    // Later you can replace `img` with your own uploaded product images (recommended).
     const joyspring = [
-      { title:"Lingo Leap", subtitle:"Speech & Communication Support Drops", asinUS:"B0D2F9CZR5", asinCA:"B0F47D7K8H", bullets:["Zeolite + D3 + B12","Language development","Kid-friendly drops"], badge:"⭐ Flagship", rating:4.7, choice:true, urgency:"Only 3 left — order now!" },
-      { title:"Genius Drops (1 oz)", subtitle:"Clinically-Proven Focus Support", asinUS:"B075FH1P4Y", bullets:["Ginkgo blend","Focus & attention","30 servings"], rating:4.5 },
-      { title:"Genius Drops (4 oz)", subtitle:"Family Size Focus Support", asinUS:"B07J6RFL35", bullets:["Herbal nootropics","120 servings"], rating:4.6 },
-      { title:"Vitamin D3 Gummies for Kids", subtitle:"D3 + K2 – Growth & Development", asinUS:"B0C87JFLDN", bullets:["60 gummies","Kids & teens","Bone & immunity"], rating:4.6, best:true },
-      { title:"Immune Drops", subtitle:"Elderberry + Echinacea + Oregon Grape Root", asinUS:"B078WK3Q4K", rating:4.5, bullets:["Sugar-free","Herbal immunity"] },
-      { title:"Zeolite Drops for Kids", subtitle:"Natural Zeolite + Vitamin D3", asinUS:"B0D2BKRDD7", rating:4.4, bullets:["Daily wellness","Zero-chemical zeolite"] },
-      { title:"Kids B-Complex", subtitle:"B Vitamins + Elderberry + Zinc + C", asinUS:"B0B18RX61R", rating:4.6, bullets:["Overall wellness","Amazon's Choice"], choice:true },
-      { title:"School Backup Support Bundle", subtitle:"Immune wellness kit for kids & teens", asinUS:"B0D9PHYCWF", rating:4.6, bullets:["Non-GMO","USA-made","Bundle savings"] },
+      {
+        title:"Lingo Leap",
+        subtitle:"Speech & Communication Support Drops",
+        asinUS:"B0D2F9CZR5", asinCA:"B0F47D7K8H",
+        bullets:["Zeolite + D3 + B12","Language development","Kid-friendly drops"],
+        badge:"Flagship", rating:4.4, reviews:46,
+        img:"https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title:"Genius Drops (1 oz)",
+        subtitle:"Clinically-Proven Focus Support",
+        asinUS:"B075FH1P4Y", asinCA:null,
+        bullets:["Ginkgo blend","Focus & attention","30 servings"],
+        rating:4.3, reviews:1200,
+        img:"https://images.unsplash.com/photo-1535914254981-b5012eebbd15?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title:"Genius Drops (4 oz)",
+        subtitle:"Family Size Focus Support",
+        asinUS:"B07J6RFL35", asinCA:null,
+        bullets:["Herbal nootropics","120 servings"],
+        rating:4.5, reviews:2100,
+        img:"https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop"
+      },
+      {
+        title:"Vitamin D3 Gummies for Kids",
+        subtitle:"D3 + K2 – Growth & Development",
+        asinUS:"B0C87JFLDN", asinCA:null,
+        bullets:["60 gummies","Kids & teens","Bone & immunity"],
+        rating:4.7, reviews:3500,
+        img:"https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1200&auto=format&fit=crop"
+      }
     ];
 
     const beauty = [
-      { title:"Mighty Patch Original (36 ct)", subtitle:"Hydrocolloid Acne Pimple Patches", rating:4.7, best:true, bullets:["Overnight results","Protects & heals"] },
-      { title:"Neutrogena Makeup Remover Wipes", subtitle:"Cleansing Towelettes", rating:4.7, bullets:["Removes waterproof","Soft on skin","Travel-friendly"] },
-      { title:"e.l.f. Lash & Brow Enhancing Serum", subtitle:"Condition & boost look", rating:4.5, choice:true, bullets:["Peptides + vitamins","Gentle formula"] },
-      { title:"LANEIGE Lip Sleeping Mask", subtitle:"Overnight lip care", rating:4.7, bullets:["Ultra-moisturizing","Cult favorite"] },
-      { title:"Mielle Rosemary Mint Oil (2 oz)", subtitle:"Scalp & Hair Strengthening", rating:4.6, bullets:["Biotin infused","All hair types"] },
-      { title:"CeraVe Eye Repair Cream", subtitle:"Hyaluronic Acid & Ceramides", rating:4.6, bullets:["Derm-developed","Fragrance-free"] },
-      { title:"Sol de Janeiro Brazilian Crush ’62", subtitle:"Body Fragrance Mist", rating:4.7, bullets:["Pistachio & caramel","Iconic scent"] },
-      { title:"Paula’s Choice 2% BHA Liquid", subtitle:"Salicylic Acid Exfoliant", rating:4.7, bullets:["Unclogs pores","Smoother skin"] },
-      { title:"Good Molecules Gentle Retinol", subtitle:"Beginner-friendly retinol", rating:4.5, bullets:["Encapsulated retinol","Soothing base"] },
-      { title:"Olay Anti-Wrinkle 2-in-1", subtitle:"Day Cream + Serum", rating:4.5, bullets:["Niacinamide + aloe","Daily use"] },
+      { title:"Mighty Patch Original (36 ct)", subtitle:"Hydrocolloid Acne Patches",
+        asinUS:"B07N2ZHFY9", asinCA:"B07N2ZHFY9",
+        bullets:["Overnight results","Protects & heals"], badge:"Best Seller",
+        rating:4.7, reviews:120000,
+        img:"https://images.unsplash.com/photo-1604120239953-9b49fc36d1c7?q=80&w=1200&auto=format&fit=crop" },
+      { title:"LANEIGE Lip Sleeping Mask", subtitle:"Overnight lip care",
+        asinUS:"B00N3K03FU", asinCA:"B0B6QCD8V5",
+        bullets:["Ultra-moisturizing","Cult-favorite"], badge:"Amazon's Choice",
+        rating:4.8, reviews:72000,
+        img:"https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1200&auto=format&fit=crop" },
+      { title:"Mielle Rosemary Mint Oil (2 oz)", subtitle:"Scalp & Hair Strengthening",
+        asinUS:"B07MZQZQ6F", asinCA:"B0BTF94Q2X",
+        bullets:["Biotin infused","For all hair types"], rating:4.6, reviews:85000,
+        img:"https://images.unsplash.com/photo-1556228453-efd1a3a1f1c4?q=80&w=1200&auto=format&fit=crop" },
+      { title:"CeraVe Eye Repair Cream", subtitle:"Hyaluronic Acid & Ceramides",
+        asinUS:"B00JJPMXDO", asinCA:"B00JJPMXDO",
+        bullets:["Derm-developed","Fragrance-free"], rating:4.6, reviews:28000,
+        img:"https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1200&auto=format&fit=crop" },
+      { title:"Sol de Janeiro Brazilian Crush ’62", subtitle:"Body Fragrance Mist",
+        asinUS:"B01MZ9Z1B9", asinCA:"B0B6QJ8Y2F",
+        bullets:["Pistachio & caramel","Iconic scent"], rating:4.7, reviews:65000,
+        img:"https://images.unsplash.com/photo-1598986646512-270b6f2dfb0d?q=80&w=1200&auto=format&fit=crop" },
+      { title:"Paula’s Choice 2% BHA Liquid", subtitle:"Salicylic Acid Exfoliant",
+        asinUS:"B00949CTQQ", asinCA:"B00L5O87KY",
+        bullets:["Unclogs pores","Smoother skin"], rating:4.6, reviews:95000,
+        img:"https://images.unsplash.com/photo-1598998269350-5c1c20c5f6f4?q=80&w=1200&auto=format&fit=crop" }
     ];
 
     const vitamins = [
-      { title:"Vitamin C 1000mg", subtitle:"Immune Support", rating:4.7, bullets:["Timed release","With bioflavonoids"] },
-      { title:"Omega-3 Fish Oil", subtitle:"EPA & DHA", rating:4.6, bullets:["Heart & brain","Burpless"] },
-      { title:"Magnesium Glycinate", subtitle:"Highly bioavailable", rating:4.7, bullets:["Muscle & sleep","Gentle on stomach"] },
-      { title:"Vitamin D3 + K2", subtitle:"Bone & immunity", rating:4.7, choice:true, bullets:["MK-7 form","Once daily"] },
-      { title:"Probiotic 50 Billion CFU", subtitle:"Digestive support", rating:4.6, bullets:["Delayed release","Prebiotic blend"] },
-      { title:"Zinc + Vitamin C", subtitle:"Antioxidant support", rating:4.5, bullets:["Immune defense","Vegan"] },
-      { title:"Ashwagandha", subtitle:"Adaptogen", rating:4.6, bullets:["Stress support","KSM-66"] },
-      { title:"Collagen Peptides", subtitle:"Type I & III", rating:4.6, bullets:["Hair/skin/nails","Unflavored"] },
-      { title:"B-Complex", subtitle:"Energy metabolism", rating:4.5 },
-      { title:"Turmeric Curcumin", subtitle:"95% Curcuminoids", rating:4.6, bullets:["Black pepper extract","Joint support"] },
+      { title:"Nature Made Vitamin D3 2000 IU", subtitle:"Immune & Bone Support",
+        asinUS:"B004R67B5Y", asinCA:"B00HEU7ZIG",
+        bullets:["Third-party tested","#1 Pharmacist Recommended"], rating:4.8, reviews:100000,
+        img:"https://images.unsplash.com/photo-1516822003754-cca485356ecb?q=80&w=1200&auto=format&fit=crop" },
+      { title:"SmartyPants Kids Multivitamin Gummies", subtitle:"Omega-3s + D3 + B12",
+        asinUS:"B00K5N8H2I", asinCA:"B00K5NJ5G2",
+        bullets:["Non-GMO","No synthetic colors"], rating:4.7, reviews:60000,
+        img:"https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop" },
+      { title:"Ritual Essential for Women 18+", subtitle:"Multivitamin",
+        asinUS:"B077TP2NWP", asinCA:null,
+        bullets:["Traceable ingredients","Delayed-release"], rating:4.5, reviews:9000,
+        img:"https://images.unsplash.com/photo-1589476993566-c5b6a7f0f90e?q=80&w=1200&auto=format&fit=crop" }
     ];
 
     const fitness = [
-      { title:"Electrolyte Powder", subtitle:"Hydration & recovery", rating:4.6, bullets:["No sugar","Rapid hydration"] },
-      { title:"Whey Protein Isolate", subtitle:"Lean protein", rating:4.7, bullets:["Fast absorbing","Low carb"] },
-      { title:"Creatine Monohydrate", subtitle:"Strength & power", rating:4.7, bullets:["Micronized","Unflavored"] },
-      { title:"Pre-Workout", subtitle:"Energy & focus", rating:4.5, bullets:["Caffeine + beta-alanine","No crash"] },
-      { title:"Greens Superfood", subtitle:"Daily micronutrients", rating:4.6, bullets:["Probiotics","Enzymes"] },
-      { title:"L-Carnitine", subtitle:"Metabolic support", rating:4.5 },
-      { title:"TheraBand Loop Set", subtitle:"Resistance bands", rating:4.7, bullets:["Home workouts","Portable"] },
-      { title:"Foam Roller", subtitle:"Muscle recovery", rating:4.6, bullets:["Deep tissue","Lightweight"] },
-      { title:"Smart Jump Rope", subtitle:"Cardio + tracker", rating:4.5 },
-      { title:"Digital Kitchen Scale", subtitle:"Meal prep", rating:4.6, bullets:["1g accuracy","Easy clean"] },
+      { title:"Optimum Nutrition Gold Standard 100% Whey", subtitle:"Protein Powder",
+        asinUS:"B000QSNYGI", asinCA:"B000QSNYGI",
+        bullets:["Post-workout","24g protein"], rating:4.8, reviews:200000,
+        img:"https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=1200&auto=format&fit=crop" },
+      { title:"Goli Apple Cider Vinegar Gummies", subtitle:"Wellness Gummies",
+        asinUS:"B07R8GDJ1N", asinCA:"B07R8GDJ1N",
+        bullets:["Vegan","Gluten-free"], rating:4.6, reviews:180000,
+        img:"https://images.unsplash.com/photo-1542442828-287226c8b6eb?q=80&w=1200&auto=format&fit=crop" }
     ];
 
     const kids = [
-      { title:"Kids Multivitamin Gummies", subtitle:"Daily essentials", rating:4.6, bullets:["No artificial colors","Great taste"] },
-      { title:"DHA for Kids", subtitle:"Brain & vision", rating:4.6, bullets:["Triglyceride form","Lemon flavor"] },
-      { title:"Probiotic for Kids", subtitle:"Digestive balance", rating:4.5 },
-      { title:"Elderberry Syrup Kids", subtitle:"Seasonal support", rating:4.6 },
-      { title:"Vitamin D3 Drops Kids", subtitle:"Bone & immunity", rating:4.7 },
-      { title:"Baby Vitamin D Drops", subtitle:"Newborn friendly", rating:4.7 },
-      { title:"Magnesium Calm Kids", subtitle:"Relax & sleep", rating:4.5 },
-      { title:"Kids Toothpaste Fluoride Free", subtitle:"Gentle clean", rating:4.6 },
-      { title:"Kids Sunscreen SPF 50", subtitle:"Broad spectrum", rating:4.6 },
-      { title:"Baby Thermometer", subtitle:"Fast & accurate", rating:4.6 },
+      { title:"Frida Baby 3-in-1 Nose, Nail + Ear Picker", subtitle:"Baby Grooming Tool",
+        asinUS:"B082H6RJG2", asinCA:"B082H6RJG2",
+        bullets:["Soft silicone","Parent-favorite"], rating:4.8, reviews:30000,
+        img:"https://images.unsplash.com/photo-1548372293-0d1bd40894a3?q=80&w=1200&auto=format&fit=crop" },
+      { title:"Zarbee's Children’s Sleep w/ Melatonin", subtitle:"Ages 3+",
+        asinUS:"B00K5NR2FQ", asinCA:"B01B1882M4",
+        bullets:["No drugs or alcohol","Natural flavors"], rating:4.6, reviews:35000,
+        img:"https://images.unsplash.com/photo-1507668077129-56e32842fceb?q=80&w=1200&auto=format&fit=crop" }
     ];
 
-    const mens = [
-      { title:"Beard Oil", subtitle:"Softens & conditions", rating:4.6, bullets:["Argan + jojoba","Non-greasy"] },
-      { title:"Beard Balm", subtitle:"Shape & control", rating:4.5 },
-      { title:"Face Wash for Men", subtitle:"Daily cleanser", rating:4.6 },
-      { title:"Moisturizer SPF 30", subtitle:"Hydrate + protect", rating:4.6 },
-      { title:"Body Wash", subtitle:"Fresh long-lasting", rating:4.5 },
-      { title:"Deodorant Aluminum-Free", subtitle:"Odor protection", rating:4.6 },
-      { title:"Safety Razor Kit", subtitle:"Close shave", rating:4.6 },
-      { title:"Hair Clay", subtitle:"Matte hold", rating:4.5 },
-      { title:"Aftershave Balm", subtitle:"Soothe & cool", rating:4.6 },
-      { title:"Nose/Ear Trimmer", subtitle:"Precision groom", rating:4.6 },
+    const men = [
+      { title:"Manscaped Beard Hedger", subtitle:"Beard Trimmer",
+        asinUS:"B0B9BX1VYJ", asinCA:"B0B9BX1VYJ",
+        bullets:["20 length settings","Waterproof"], rating:4.6, reviews:12000,
+        img:"https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=1200&auto=format&fit=crop" },
+      { title:"CeraVe Hydrating Facial Cleanser", subtitle:"Normal to Dry Skin",
+        asinUS:"B01MSSDEPK", asinCA:"B01MSSDEPK",
+        bullets:["Hyaluronic acid","Ceramides"], rating:4.7, reviews:110000,
+        img:"https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1200&auto=format&fit=crop" }
     ];
 
     const catalogs = {
       joyspring: { title:"Featured JoySpring Products", sub:"Carefully curated best-sellers you can recommend with confidence.", items: joyspring },
       beauty:    { title:"Top Health & Beauty Best-Sellers", sub:"Highly-rated essentials added for your convenience.", items: beauty },
-      vitamins:  { title:"Vitamins & Supplements", sub:"Daily essentials for energy, immunity, and overall wellness.", items: vitamins },
-      fitness:   { title:"Fitness & Weight Loss", sub:"Fuel performance, recovery, and lean goals.", items: fitness },
-      kids:      { title:"Baby & Kids Wellness", sub:"Family-friendly wellness for little ones.", items: kids },
-      mens:      { title:"Men’s Grooming Essentials", sub:"Clean, simple, effective grooming staples.", items: mens },
+      vitamins:  { title:"Vitamins & Supplements", sub:"Popular picks to support daily wellness.", items: vitamins },
+      fitness:   { title:"Fitness & Weight Loss", sub:"Customer-favorites for training and weight management.", items: fitness },
+      kids:      { title:"Baby & Kids Wellness", sub:"Trusted choices for little ones.", items: kids },
+      men:       { title:"Men’s Grooming Essentials", sub:"Everyday grooming and skincare must-haves.", items: men }
     };
 
-    /* ===== Render ===== */
+    // ----- UI helpers -----
+    function stars(rating=4.6) {
+      const full = Math.floor(rating);
+      const half = rating - full >= 0.5;
+      let html = "";
+      for (let i=0;i<full;i++) html += `<span class="star text-amber-400"></span>`;
+      if (half) html += `<span class="star text-amber-300 opacity-70"></span>`;
+      const remain = 5 - full - (half?1:0);
+      for (let i=0;i<remain;i++) html += `<span class="star text-gray-300"></span>`;
+      return html;
+    }
+
+    function urgency() {
+      const msgs = [
+        "Only 3 left — order now!",
+        "Fast delivery — arrives by Tuesday!",
+        "Popular item — selling quickly!",
+        "Back in stock — limited supply!"
+      ];
+      return msgs[Math.floor(Math.random()*msgs.length)];
+    }
+
+    function badge(text) {
+      if (!text) return "";
+      const color = /best|choice/i.test(text) ? "bg-amber-100 text-amber-900 border-amber-200" : "bg-emerald-100 text-emerald-900 border-emerald-200";
+      return `<span class="inline-flex items-center gap-1 rounded-full border ${color} px-2 py-0.5 text-xs font-medium">⭐ ${text}</span>`;
+    }
+
+    function productCard(p) {
+      const aUrl = buyUrl(p);
+      const note = urgency();
+      return `
+        <div class="group relative overflow-hidden rounded-2xl border bg-white shadow-sm transition hover:shadow-md">
+          <div class="aspect-[4/3] w-full overflow-hidden bg-gray-100">
+            <img src="${p.img}" alt="${p.title}" class="h-full w-full object-cover transition group-hover:scale-[1.02]" loading="lazy">
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <h3 class="text-base font-semibold leading-tight">${p.title}</h3>
+                <p class="text-sm text-gray-600">${p.subtitle}</p>
+              </div>
+              ${badge(p.badge)}
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-700">
+              <span class="inline-flex">${stars(p.rating)}</span>
+              <span class="opacity-70">(${(p.reviews||1000).toLocaleString()})</span>
+            </div>
+            <ul class="mt-1 space-y-1 text-sm text-gray-700">
+              ${p.bullets.map(b => `<li class="flex items-start gap-2"><span class="dot"></span><span>${b}</span></li>`).join("")}
+            </ul>
+            <div class="mt-2 text-xs text-emerald-700">${note}</div>
+            <div class="mt-3 flex items-center justify-between gap-3">
+              <a href="${aUrl}" target="_blank" rel="nofollow sponsored noopener"
+                 data-outbound="amazon"
+                 class="inline-flex items-center gap-2 rounded-xl bg-black px-3 py-2 text-sm font-semibold text-white transition hover:-translate-y-px">
+                Get Fast Amazon Delivery
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
+                </svg>
+              </a>
+              <a href="${aUrl}" target="_blank" rel="nofollow sponsored noopener"
+                 class="text-sm font-medium text-emerald-700 hover:underline">View</a>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // ----- Render logic -----
     const grid = document.getElementById("grid");
     const sectionTitle = document.getElementById("sectionTitle");
     const sectionSub = document.getElementById("sectionSub");
 
-    function renderTab(key){
-      const cat = catalogs[key] || catalogs.joyspring;
-      sectionTitle.textContent = cat.title;
-      sectionSub.textContent = cat.sub;
-      grid.innerHTML = "";
-      cat.items.forEach(p => grid.appendChild(card(p)));
-      // top CTA defaults to Lingo Leap if present
-      const first = catalogs.joyspring.items[0];
-      if (first) document.getElementById("shopLingo").href = productUrl(first);
+    function renderTab(tab="joyspring") {
+      const c = catalogs[tab];
+      sectionTitle.textContent = c.title;
+      sectionSub.textContent = c.sub;
+      grid.innerHTML = c.items.map(productCard).join("");
+      // set Lingo Leap top CTA
+      if (tab === "joyspring" && joyspring.length) {
+        document.getElementById("shopLingo").href = buyUrl(joyspring[0]);
+      }
+      // update selected tab styles
+      document.querySelectorAll(".tab-btn").forEach(b=>{
+        if (b.dataset.tab === tab) {
+          b.classList.remove("bg-white");
+          b.classList.add("bg-black","text-white");
+        } else {
+          b.classList.remove("bg-black","text-white");
+          b.classList.add("bg-white");
+        }
+      });
+      // simple outbound click tracking
+      document.querySelectorAll("[data-outbound='amazon']").forEach(el=>{
+        el.addEventListener("click", ()=> {
+          // lightweight analytics hook point
+          // console.log("Outbound → Amazon:", el.href);
+        }, { once:true });
+      });
     }
 
-    // Tabs UI
-    const tabBtns = Array.from(document.querySelectorAll(".tab"));
-    tabBtns.forEach(btn=>{
-      btn.addEventListener("click", ()=>{
-        tabBtns.forEach(b=>b.classList.remove("active","bg-emerald-600","text-white"));
-        btn.classList.add("active","bg-emerald-600","text-white");
-        renderTab(btn.dataset.tab);
-      });
+    // tab switching
+    document.querySelectorAll(".tab-btn").forEach(btn=>{
+      btn.addEventListener("click", ()=> renderTab(btn.dataset.tab));
     });
 
-    // Initial render
+    // initial render
     renderTab("joyspring");
   </script>
 </body>
