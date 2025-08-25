@@ -1,71 +1,160 @@
-<script>
-  // ----- Affiliate tags (US pre-filled; CA optional) -----
-  const AFFILIATE_TAG_US = "greenwoodinvestments-20";
-  const AFFILIATE_TAG_CA = "YOUR_CA_TAG_HERE"; // e.g., "greenwoodin01-20"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Greenwood Wellness Store</title>
+  <meta name="description" content="JoySpring favorites for speech, focus, and everyday wellness. Fast Amazon delivery and secure checkout via Amazon." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .dot{width:6px;height:6px;border-radius:9999px;background:#9ca3af;margin-top:6px}
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Header / Hero -->
+  <header class="relative isolate overflow-hidden bg-gradient-to-br from-emerald-600 via-emerald-500 to-teal-500 py-16 text-white">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="max-w-2xl">
+        <h1 class="text-3xl font-bold sm:text-4xl">Greenwood Wellness Store</h1>
+        <p class="mt-2 text-lg opacity-90">Trusted Supplements, Delivered by Amazon</p>
+        <p class="mt-3 text-white/90">JoySpring favorites for speech, focus, and everyday wellness. Fast delivery and secure checkout via Amazon.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a id="shopLingo" href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-emerald-700 shadow-sm transition hover:-translate-y-px">
+            <span>Shop Lingo Leap</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg>
+          </a>
+          <a href="#why" class="inline-flex items-center gap-2 rounded-2xl border border-white/40 px-4 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:-translate-y-px">
+            Why buy through us?
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pointer-events-none absolute inset-0 -z-10 opacity-30" aria-hidden="true">
+      <div class="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white blur-3xl"></div>
+    </div>
+  </header>
 
-  // ----- Product catalog -----
-  const products = [
-    { title: "Lingo Leap", subtitle: "Speech & Communication Support Drops", asinUS: "B0D2F9CZR5", asinCA: null, bullets: ["Zeolite + D3 + B12", "Supports language development", "Kid-friendly drops"], badge: "Flagship" },
-    { title: "Genius Drops (1 oz)", subtitle: "Clinically-Proven Focus Support", asinUS: "B075FH1P4Y", asinCA: null, bullets: ["Ginkgo biloba blend", "Focus & attention", "30 servings"] },
-    { title: "Genius Drops (4 oz)", subtitle: "Family Size Focus Support", asinUS: "B07J6RFL35", asinCA: null, bullets: ["Herbal nootropics", "120 servings", "Liquid formula"] },
-    { title: "Vitamin D3 Gummies for Kids", subtitle: "D3 + K2 – Growth & Development", asinUS: "B0C87JFLDN", asinCA: null, bullets: ["60 gummies", "Kids & teens", "Bone & immunity"] },
-    { title: "Immune Drops", subtitle: "Elderberry + Echinacea + Oregon Grape Root", asinUS: "B078WK3Q4K", asinCA: null, bullets: ["Sugar-free", "Herbal immunity", "Family-friendly"] },
-    { title: "Zeolite Drops for Kids", subtitle: "Natural Zeolite + Vitamin D3", asinUS: "B0D2BKRDD7", asinCA: null, bullets: ["Daily wellness", "Zero-chemical zeolite", "Berry flavor"] },
-    { title: "Kids B-Complex", subtitle: "B Vitamins + Elderberry + Zinc + C", asinUS: "B0B18RX61R", asinCA: null, bullets: ["Overall wellness", "30 servings", "Amazon's Choice"] },
-    { title: "School Backup Support Bundle", subtitle: "Immune wellness kit for kids & teens", asinUS: "B0D9PHYCWF", asinCA: null, bullets: ["Non-GMO", "USA-made", "Bundle savings"] }
-  ];
+  <!-- Trust bar -->
+  <div class="border-b bg-white/70">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-6 px-4 py-3 text-sm text-gray-700">
+      <div class="inline-flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h13l3 5H6z"/><path d="M16 16a2 2 0 1 0 0 4 2 2 0 0 0 0-4M8 16a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/></svg>
+        <span>Fast Amazon delivery</span>
+      </div>
+      <div class="inline-flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        <span>Secure checkout</span>
+      </div>
+      <div class="inline-flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v20M18 2v20M3 7h18M3 17h18"/></svg>
+        <span>Family-friendly formulas</span>
+      </div>
+    </div>
+  </div>
 
-  // ----- Region detection -----
-  const isCA = (navigator.language || '').toLowerCase().includes('en-ca') ||
-               (Intl.DateTimeFormat().resolvedOptions().timeZone || '').includes('America/Edmonton');
+  <!-- Main -->
+  <main class="mx-auto max-w-6xl px-4 py-10">
+    <h2 class="text-2xl font-bold">Featured JoySpring Products</h2>
+    <p class="mt-1 text-gray-600">Carefully curated best-sellers you can recommend with confidence.</p>
+    <div id="grid" class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+  </main>
 
-  // ----- Build Amazon URL dynamically -----
-  function buyUrl(p) {
-    if (isCA && p.asinCA && AFFILIATE_TAG_CA && AFFILIATE_TAG_CA !== "YOUR_CA_TAG_HERE") {
-      return `https://www.amazon.ca/dp/${p.asinCA}?tag=${encodeURIComponent(AFFILIATE_TAG_CA)}`;
-    }
-    const base = `https://www.amazon.com/dp/${p.asinUS}`;
-    return AFFILIATE_TAG_US ? `${base}?tag=${encodeURIComponent(AFFILIATE_TAG_US)}` : base;
-  }
-
-  // ----- Render product cards -----
-  function productCard(p) {
-    const li = document.createElement("div");
-    li.className = "group relative flex flex-col justify-between rounded-2xl border bg-white p-4 shadow-sm transition hover:shadow-md";
-    li.innerHTML = `
-      <div class="flex items-start justify-between gap-3">
+  <!-- Footer -->
+  <footer class="mt-8 border-t bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-gray-600">
+      <div id="why" class="grid grid-cols-1 gap-8 md:grid-cols-3">
         <div>
-          <h3 class="text-base font-semibold leading-tight">${p.title}</h3>
-          <p class="text-sm text-gray-600">${p.subtitle}</p>
+          <h3 class="font-semibold text-gray-900">Why buy through Greenwood Wellness Store?</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5">
+            <li>We curate top JoySpring products for speech, focus, and everyday wellness.</li>
+            <li>All purchases are fulfilled by Amazon for fast shipping and easy returns.</li>
+            <li>We keep links updated so you always land on the correct listing.</li>
+          </ul>
         </div>
-        <div class="shrink-0 rounded-xl bg-gray-100 p-3">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 3h18v4H3zM11 7h2v14h-2z"/>
-          </svg>
+        <div>
+          <h3 class="font-semibold text-gray-900">Affiliate Disclosure</h3>
+          <p class="mt-2">As an Amazon Associate, Greenwood Wellness Store earns from qualifying purchases. This helps us create more educational content at no additional cost to you.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-900">Health Disclaimer</h3>
+          <p class="mt-2">Content on this site is for informational purposes only and is not a substitute for professional medical advice. Always consult a qualified healthcare provider for guidance specific to your child.</p>
         </div>
       </div>
-      <ul class="mt-3 space-y-1 text-sm text-gray-700">
-        ${p.bullets.map(b => `<li class="flex items-start gap-2"><span class="dot"></span><span>${b}</span></li>`).join("")}
-      </ul>
-      <div class="mt-4 flex items-center justify-between">
-        ${p.badge ? `<span class="inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs font-medium">⭐ ${p.badge}</span>` : `<span></span>`}
-        <a href="${buyUrl(p)}" target="_blank" rel="nofollow sponsored noopener"
-           class="inline-flex items-center gap-2 rounded-xl border bg-black px-3 py-2 text-sm font-semibold text-white transition hover:-translate-y-px hover:opacity-95">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/>
-          </svg>
-          Buy on Amazon
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
-          </svg>
-        </a>
-      </div>
-    `;
-    return li;
-  }
+      <div class="mt-8 text-center text-xs">© 2025 Greenwood Investments Limited. All rights reserved.</div>
+    </div>
+  </footer>
 
-  // ----- Render all products -----
-  const grid = document.getElementById("grid");
-  products.forEach(p => grid.appendChild(productCard(p)));
-  document.getElementById("shopLingo").href = buyUrl(products[0]);
-</script>
+  <!-- Single, clean script block -->
+  <script>
+    // ----- Affiliate tags (US pre-filled; CA optional) -----
+    const AFFILIATE_TAG_US = "greenwoodinvestments-20";
+    const AFFILIATE_TAG_CA = "YOUR_CA_TAG_HERE"; // e.g., "greenwoodin01-20"
+
+    // ----- Product catalog -----
+    const products = [
+      { title: "Lingo Leap", subtitle: "Speech & Communication Support Drops", asinUS: "B0D2F9CZR5", asinCA: null, bullets: ["Zeolite + D3 + B12", "Supports language development", "Kid-friendly drops"], badge: "Flagship" },
+      { title: "Genius Drops (1 oz)", subtitle: "Clinically-Proven Focus Support", asinUS: "B075FH1P4Y", asinCA: null, bullets: ["Ginkgo biloba blend", "Focus & attention", "30 servings"] },
+      { title: "Genius Drops (4 oz)", subtitle: "Family Size Focus Support", asinUS: "B07J6RFL35", asinCA: null, bullets: ["Herbal nootropics", "120 servings", "Liquid formula"] },
+      { title: "Vitamin D3 Gummies for Kids", subtitle: "D3 + K2 – Growth & Development", asinUS: "B0C87JFLDN", asinCA: null, bullets: ["60 gummies", "Kids & teens", "Bone & immunity"] },
+      { title: "Immune Drops", subtitle: "Elderberry + Echinacea + Oregon Grape Root", asinUS: "B078WK3Q4K", asinCA: null, bullets: ["Sugar-free", "Herbal immunity", "Family-friendly"] },
+      { title: "Zeolite Drops for Kids", subtitle: "Natural Zeolite + Vitamin D3", asinUS: "B0D2BKRDD7", asinCA: null, bullets: ["Daily wellness", "Zero-chemical zeolite", "Berry flavor"] },
+      { title: "Kids B-Complex", subtitle: "B Vitamins + Elderberry + Zinc + C", asinUS: "B0B18RX61R", asinCA: null, bullets: ["Overall wellness", "30 servings", "Amazon's Choice"] },
+      { title: "School Backup Support Bundle", subtitle: "Immune wellness kit for kids & teens", asinUS: "B0D9PHYCWF", asinCA: null, bullets: ["Non-GMO", "USA-made", "Bundle savings"] }
+    ];
+
+    // ----- Region detection -----
+    const isCA = (navigator.language || '').toLowerCase().includes('en-ca') ||
+                 (Intl.DateTimeFormat().resolvedOptions().timeZone || '').includes('America/Edmonton');
+
+    // ----- Build Amazon URL dynamically -----
+    function buyUrl(p) {
+      if (isCA && p.asinCA && AFFILIATE_TAG_CA && AFFILIATE_TAG_CA !== "YOUR_CA_TAG_HERE") {
+        return `https://www.amazon.ca/dp/${p.asinCA}?tag=${encodeURIComponent(AFFILIATE_TAG_CA)}`;
+      }
+      const base = `https://www.amazon.com/dp/${p.asinUS}`;
+      return AFFILIATE_TAG_US ? `${base}?tag=${encodeURIComponent(AFFILIATE_TAG_US)}` : base;
+    }
+
+    // ----- Render product cards -----
+    function productCard(p) {
+      const li = document.createElement("div");
+      li.className = "group relative flex flex-col justify-between rounded-2xl border bg-white p-4 shadow-sm transition hover:shadow-md";
+      li.innerHTML = `
+        <div class="flex items-start justify-between gap-3">
+          <div>
+            <h3 class="text-base font-semibold leading-tight">${p.title}</h3>
+            <p class="text-sm text-gray-600">${p.subtitle}</p>
+          </div>
+          <div class="shrink-0 rounded-xl bg-gray-100 p-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 3h18v4H3zM11 7h2v14h-2z"/>
+            </svg>
+          </div>
+        </div>
+        <ul class="mt-3 space-y-1 text-sm text-gray-700">
+          ${p.bullets.map(b => `<li class="flex items-start gap-2"><span class="dot"></span><span>${b}</span></li>`).join("")}
+        </ul>
+        <div class="mt-4 flex items-center justify-between">
+          ${p.badge ? `<span class="inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs font-medium">⭐ ${p.badge}</span>` : `<span></span>`}
+          <a href="${buyUrl(p)}" target="_blank" rel="nofollow sponsored noopener"
+             class="inline-flex items-center gap-2 rounded-xl border bg-black px-3 py-2 text-sm font-semibold text-white transition hover:-translate-y-px hover:opacity-95">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/>
+            </svg>
+            Buy on Amazon
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
+            </svg>
+          </a>
+        </div>
+      `;
+      return li;
+    }
+
+    // ----- Render all products & set top CTA -----
+    const grid = document.getElementById("grid");
+    products.forEach(p => grid.appendChild(productCard(p)));
+    document.getElementById("shopLingo").href = buyUrl(products[0]);
+  </script>
+</body>
+</html>
