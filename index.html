@@ -1,18 +1,53 @@
+<!-- Products area START -->
+<section class="mx-auto max-w-6xl px-4 py-10">
+  <!-- Tabs -->
+  <div class="flex flex-wrap gap-2">
+    <button id="tab-joyspring" data-active="true"
+      class="rounded-full border px-3 py-1.5 text-sm font-semibold transition data-[active=true]:bg-emerald-600 data-[active=true]:text-white">
+      JoySpring
+    </button>
+    <button id="tab-hb"
+      class="rounded-full border px-3 py-1.5 text-sm font-semibold transition data-[active=true]:bg-emerald-600 data-[active=true]:text-white">
+      Health & Beauty
+    </button>
+    <button id="tab-vitamins"
+      class="rounded-full border px-3 py-1.5 text-sm font-semibold transition data-[active=true]:bg-emerald-600 data-[active=true]:text-white">
+      Vitamins & Supplements
+    </button>
+    <button id="tab-fitness"
+      class="rounded-full border px-3 py-1.5 text-sm font-semibold transition data-[active=true]:bg-emerald-600 data-[active=true]:text-white">
+      Fitness & Weight Loss
+    </button>
+    <button id="tab-baby"
+      class="rounded-full border px-3 py-1.5 text-sm font-semibold transition data-[active=true]:bg-emerald-600 data-[active=true]:text-white">
+      Baby & Kids Wellness
+    </button>
+    <button id="tab-men"
+      class="rounded-full border px-3 py-1.5 text-sm font-semibold transition data-[active=true]:bg-emerald-600 data-[active=true]:text-white">
+      Men’s Grooming Essentials
+    </button>
+  </div>
+
+  <!-- Section heading + grid -->
+  <h2 id="sectionTitle" class="mt-6 text-2xl font-bold">Featured JoySpring Products</h2>
+  <p id="sectionDesc" class="mt-1 text-gray-600">Carefully curated best-sellers you can recommend with confidence.</p>
+  <div id="grid" class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+</section>
+
 <script>
   // ---------- Affiliate tags ----------
   const AFFILIATE_TAG_US = "greenwoodinvestments-20";
   const AFFILIATE_TAG_CA = "greenwoodin01-20";
 
-  // ---------- Region detection (simple & private) ----------
+  // ---------- Region detection ----------
   const isCA =
-    (navigator.language || "").toLowerCase().includes("en-ca") ||
-    (Intl.DateTimeFormat().resolvedOptions().timeZone || "").includes("America/Edmonton") ||
+    navigator.language?.toLowerCase().includes("en-ca") ||
+    Intl.DateTimeFormat().resolvedOptions().timeZone?.includes("America/Edmonton") ||
     location.hostname.endsWith(".ca");
 
   // ---------- Helpers ----------
   const ph = (name) => `https://dummyimage.com/600x400/edf2f7/1f2937&text=${encodeURIComponent(name)}`;
 
-  // Product page URL (deep link or tagged search fallback)
   function buyUrl(p) {
     const q = encodeURIComponent(p.title);
     if (isCA) {
@@ -23,9 +58,6 @@
     return `https://www.amazon.com/s?k=${q}&tag=${encodeURIComponent(AFFILIATE_TAG_US)}`;
   }
 
-  // Smart Add-to-Cart:
-  // Uses Amazon's cart add endpoint when we have a region-appropriate ASIN.
-  // Falls back to the product page if not available (so nothing breaks).
   function addToCartUrl(p, qty = 1) {
     if (isCA && p.asinCA) {
       return `https://www.amazon.ca/gp/aws/cart/add.html?ASIN.1=${encodeURIComponent(p.asinCA)}&Quantity.1=${qty}&tag=${encodeURIComponent(AFFILIATE_TAG_CA)}`;
@@ -33,7 +65,6 @@
     if (!isCA && p.asinUS) {
       return `https://www.amazon.com/gp/aws/cart/add.html?ASIN.1=${encodeURIComponent(p.asinUS)}&Quantity.1=${qty}&tag=${encodeURIComponent(AFFILIATE_TAG_US)}`;
     }
-    // Fallback: open normal product page for the detected region
     return buyUrl(p);
   }
 
@@ -49,10 +80,10 @@
           <h3 class="text-base font-semibold leading-tight">${p.title}</h3>
           <p class="text-sm text-gray-600">${p.subtitle || ""}</p>
         </div>
-        ${p.badge ? `<span class="shrink-0 rounded-full border px-2 py-0.5 text-xs font-medium">⭐ ${p.badge}</span>` : ``}
+        ${p.badge ? `<span class="shrink-0 rounded-full border px-2 py-0.5 text-xs font-medium">⭐ ${p.badge}</span>` : ""}
       </div>
       <ul class="mt-3 space-y-1 text-sm text-gray-700">
-        ${(p.bullets||[]).map(b => `<li class="flex items-start gap-2"><span class="dot"></span><span>${b}</span></li>`).join("")}
+        ${(p.bullets || []).map(b => `<li class="flex items-start gap-2"><span class="dot"></span><span>${b}</span></li>`).join("")}
       </ul>
       <div class="mt-4 flex items-center justify-between gap-3">
         <a href="${addToCartUrl(p)}" target="_blank" rel="nofollow sponsored noopener"
@@ -81,14 +112,44 @@
     list.forEach(p => grid.appendChild(productCard(p)));
   }
 
-  // ---------- Catalogs (reuse your existing arrays) ----------
-  // Keep your existing arrays exactly as you have them now:
-  // joyspring, healthBeauty, vitaminsSupp, fitness, babyKids, mensGroom
-  // (If they’re already declared above this script in your file, remove duplicates.
-  //  If they’re in this same block, leave as-is.)
+  // ---------- Catalog arrays (with real ASINs where available) ----------
+  const joyspring = [
+    { title: "Lingo Leap", subtitle: "Speech & Communication Support Drops", asinUS: "B0D2F9CZR5", asinCA: "B0F47D7K8H", bullets: ["Zeolite + D3 + B12", "Language development", "Kid-friendly drops"], badge: "Flagship" },
+    { title: "Genius Drops (1 oz)", subtitle: "Clinically-Proven Focus Support", asinUS: "B075FH1P4Y", asinCA: null, bullets: ["Ginkgo blend", "Focus & attention", "30 servings"] },
+    { title: "Genius Drops (4 oz)", subtitle: "Family Size Focus Support", asinUS: "B07J6RFL35", asinCA: null, bullets: ["Herbal nootropics", "120 servings"] },
+    { title: "Vitamin D3 Gummies for Kids", subtitle: "D3 + K2 – Growth & Development", asinUS: "B0C87JFLDN", asinCA: null, bullets: ["60 gummies", "Kids & teens", "Bone & immunity"] }
+  ];
 
-  // If these arrays are already in your file from the previous version, DO NOT redefine them.
-  // Otherwise paste the arrays here (unchanged from your working version).
+  const healthBeauty = [
+    { title: "Mighty Patch Original (36 ct)", subtitle: "Hydrocolloid Patches", asinUS: "B07FB4QZMC", asinCA: "B08JZF729V", bullets: ["Overnight clear", "Protects & heals", "Best-seller"], badge: "Best-seller" },
+    { title: "Neutrogena Makeup Remover Wipes", subtitle: "Cleansing Towelettes", asinUS: "B00U2VQZDS", asinCA: "B07FLD6T6Q", bullets: ["Removes mascara", "Gentle", "Travel pack"] },
+    { title: "e.l.f. Lash & Brow Enhancing Serum", subtitle: "Condition & boost lashes/brows", asinUS: "B0948G7M72", asinCA: null, bullets: ["Peptides & vitamins", "Clear formula"] },
+    { title: "LANEIGE Lip Sleeping Mask", subtitle: "Overnight Lip Care", asinUS: "B0BR7P915B", asinCA: "B0CRDG2T21", bullets: ["Ultra-moisturizing", "Cult favorite"] }
+  ];
+
+  const vitaminsSupp = [
+    { title: "Nature Made Vitamin D3 2000 IU", subtitle: "Bone & Immune Support", asinUS: "B0049J1C92", asinCA: null },
+    { title: "Optimum Nutrition Opti-Men", subtitle: "High-Potency Multivitamin", asinUS: "B000GIQRWG", asinCA: "B005ZIHLLY" },
+    { title: "Garden of Life mykind Organics Women’s Multi", subtitle: "Organic Multivitamin", asinUS: "B00K5N6Z5G", asinCA: null }
+  ];
+
+  const fitness = [
+    { title: "Optimum Nutrition Gold Standard Whey 2 lb", subtitle: "Post-Workout Protein", asinUS: "B000QSNYGI", asinCA: "B00GG0KOS4" },
+    { title: "LMNT Zero-Sugar Electrolyte Mix", subtitle: "Hydration Mix", asinUS: "B08Y1C4M2Z", asinCA: "B08ZK7Z4PS" },
+    { title: "Nutricost Creatine Monohydrate 500 g", subtitle: "Strength & Power", asinUS: "B01M3VQZQW", asinCA: null }
+  ];
+
+  const babyKids = [
+    { title: "Zarbee’s Cough Syrup", subtitle: "Dark Honey + Ivy Leaf", asinUS: "B00H2D4IGM", asinCA: "B07FRTPQGF" },
+    { title: "Wellements Vitamin D Drops", subtitle: "Newborn & Infant", asinUS: "B00F8PKD4E", asinCA: null },
+    { title: "Frida Snot Sucker", subtitle: "Nasal Aspirator", asinUS: "B00BGIP9FE", asinCA: "B07C46TPQP" }
+  ];
+
+  const mensGroom = [
+    { title: "CeraVe Hydrating Cleanser", subtitle: "Normal to Dry Skin", asinUS: "B01N9F3F46", asinCA: "B07GMM1QZC" },
+    { title: "Gillette Fusion5 Razor + Refills", subtitle: "Close & Comfortable", asinUS: "B01K0F1I6E", asinCA: "B07P6V46WR" },
+    { title: "Brickell Men’s Daily Moisturizer", subtitle: "Sensitive Skin Formula", asinUS: "B00NQ368Q4", asinCA: null }
+  ];
 
   // ---------- Wire up tabs ----------
   const grid = document.getElementById("grid");
@@ -103,48 +164,44 @@
   const tabMen = document.getElementById("tab-men");
 
   function setActive(btn) {
-    [tabJoy, tabHB, tabVit, tabFit, tabBaby, tabMen].forEach(b => b && delete b.dataset.active);
-    if (btn) btn.dataset.active = "true";
+    [tabJoy, tabHB, tabVit, tabFit, tabBaby, tabMen].forEach(b => b?.removeAttribute("data-active"));
+    btn?.setAttribute("data-active", "true");
   }
 
-  // Attach only if those buttons exist on the page
-  if (tabJoy) tabJoy.addEventListener("click", () => {
+  tabJoy.addEventListener("click", () => {
     setActive(tabJoy);
     render(joyspring, "Featured JoySpring Products", "Carefully curated best-sellers you can recommend with confidence.");
-    const shop = document.getElementById("shopLingo");
-    if (shop && joyspring[0]) shop.href = buyUrl(joyspring[0]);
+    document.getElementById("shopLingo").href = buyUrl(joyspring[0]);
   });
 
-  if (tabHB) tabHB.addEventListener("click", () => {
+  tabHB.addEventListener("click", () => {
     setActive(tabHB);
     render(healthBeauty, "Top Health & Beauty Best-Sellers", "Highly-rated essentials added for your convenience.");
   });
 
-  if (tabVit) tabVit.addEventListener("click", () => {
+  tabVit.addEventListener("click", () => {
     setActive(tabVit);
     render(vitaminsSupp, "Vitamins & Supplements", "Everyday wellness staples customers love.");
   });
 
-  if (tabFit) tabFit.addEventListener("click", () => {
+  tabFit.addEventListener("click", () => {
     setActive(tabFit);
     render(fitness, "Fitness & Weight Loss", "Popular picks for training, recovery, and hydration.");
   });
 
-  if (tabBaby) tabBaby.addEventListener("click", () => {
+  tabBaby.addEventListener("click", () => {
     setActive(tabBaby);
     render(babyKids, "Baby & Kids Wellness", "Parent-approved favorites for little ones.");
   });
 
-  if (tabMen) tabMen.addEventListener("click", () => {
+  tabMen.addEventListener("click", () => {
     setActive(tabMen);
     render(mensGroom, "Men’s Grooming Essentials", "Clean, simple, effective daily care.");
   });
 
-  // Initial load (default to JoySpring)
-  setActive(tabJoy || null);
-  if (typeof joyspring !== "undefined") {
-    render(joyspring, "Featured JoySpring Products", "Carefully curated best-sellers you can recommend with confidence.");
-    const shop = document.getElementById("shopLingo");
-    if (shop && joyspring[0]) shop.href = buyUrl(joyspring[0]);
-  }
+  // Initial load
+  setActive(tabJoy);
+  render(joyspring, "Featured JoySpring Products", "Carefully curated best-sellers you can recommend with confidence.");
+  document.getElementById("shopLingo").href = buyUrl(joyspring[0]);
 </script>
+<!-- Products area END -->
